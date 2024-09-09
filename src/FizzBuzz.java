@@ -34,10 +34,15 @@ class FizzBuzz {
          *  - Condition
          *  - Update
          *
+         * Two ways:
+         *  - post-body incrementing
+         *  - within-condition incrementing
+         *
          * Food for thought: how does this relate to Python's range function?
          *  - for i in range(1, 100)
          */
-        for (int i = 1; i < 100; i++) {
+        int i = 0;
+        while (++i < 100) {
 
             // Find out which numbers divide i.
             boolean divisibleBy3 = i % 3 == 0;
