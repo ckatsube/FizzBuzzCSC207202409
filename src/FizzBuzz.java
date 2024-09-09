@@ -27,7 +27,17 @@
 class FizzBuzz {
 
     public static void main(String[] args) {
+        fizzBuzzMain();
+    }
 
+    /**
+     * We've added an extra layer here that makes the String[] args
+     * unnecessary to run this FizzBuzz 1-100 code. Although not an
+     * explicit principle, throughout this course you  will discover
+     * different ways of de-coupling code from its inconvenient parts
+     * to help make logic more reusable and testable.
+     */
+    public static void fizzBuzzMain() {
         /**
          * How can we convert this for loop to a while loop?
          *  - Initialization
@@ -53,7 +63,7 @@ class FizzBuzz {
      *  - How is it different from before
      *  - How can we still improve it
      */
-    private static void doFizzBuzz(int i) {
+    public static void doFizzBuzz(int i) {
         // Find out which numbers divide i.
         boolean divisibleBy3 = i % 3 == 0;
         boolean divisibleBy5 = i % 5 == 0;
