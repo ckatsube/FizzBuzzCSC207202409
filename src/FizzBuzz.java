@@ -42,30 +42,39 @@ class FizzBuzz {
          *  - for i in range(1, 100)
          */
         int i = 0;
-        while (++i < 100) {
+        while (++i < 100) doFizzBuzz(i);
+    }
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+    /**
+     * Does the private keyword here relate to any Python concepts?
+     * What happens if we remove static here?
+     *
+     * How much more testable is this function?
+     *  - How is it different from before
+     *  - How can we still improve it
+     */
+    private static void doFizzBuzz(int i) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
+        // Print our appropriate result.
+        if (divisibleBy3 && divisibleBy5) {
 
-                System.out.println("Fizz Buzz");
+            System.out.println("Fizz Buzz");
 
-            } else if (divisibleBy3) {
+        } else if (divisibleBy3) {
 
-                System.out.println("Fizz");
+            System.out.println("Fizz");
 
-            } else if (divisibleBy5) {
+        } else if (divisibleBy5) {
 
-                System.out.println("Buzz");
+            System.out.println("Buzz");
 
-            } else {
+        } else {
 
-                System.out.println(i);
+            System.out.println(i);
 
-            }
         }
     }
 }
